@@ -63,7 +63,10 @@ echo getType($var1);
 ?>
 <br />
 setType($var)    设置变量类型<br />
-
+<?php 
+setType($var1,"double");
+echo getType($var1);
+?>
 
 </body>
 </html>
