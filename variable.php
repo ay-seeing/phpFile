@@ -62,11 +62,37 @@ $var1="abcdef";
 echo getType($var1);
 ?>
 <br />
-setType($var)    设置变量类型<br />
+setType($var,typeName)    设置变量类型<br />
 <?php 
-setType($var1,"double");
+echo setType($var1,"double")."<br />";
 echo getType($var1);
 ?>
+<h4>其他检测变量<strong style="color:red">类型</strong>函数</h4>
+is_string()   检测变量是不是数组 <br />
+is_array()   检测变量是不是数组 <br />
+is_double()  is_float()   is_real()   （都是相同的函数） 检测变量是不是浮点数（双精度类型） <br />
+is_long()   is_int()   is_integer()   (都是相同的函数)  检测变量是不是整数型<br />
+is_bool()   检测变量是不是布尔类型<br />
+is_object()   检测变量是不是对象<br />
+is_resource()  检测变量是不是一个资源<br />
+is_null()  检测变量是不是为null<br />
+is_scalar()  检查变量是不是标量，即 一个整数、布尔值、字符串或浮点数。<br />
+is_numeric()  检测变量是不是任何类型的数字或数字字符串<br />
+is_callable()   检测变量是不是有效的函数名<br /><br />
 
+<h4>测试变量<strong style="color:red">状态</strong></h4>
+isset($var)  如果变量存在返回 <br />true（可以传递一个由逗号隔开的变量列表，如果所有变量都被设置了，则返回 true）<br />
+unset($var)  销毁一个变量，同样可以传递多个变量<br />
+empty() 检测一个变量是否存在，以及他的值是否为非空和非0，相应的返回 true 或 false<br />
+<?php 
+$strss="";
+echo isset($strss)."<br />";
+echo empty($strss)."<br />";
+?>
+
+<h4>变量重解释</h4>
+intval($var,baseVal);  转换为整数
+floatval($var)   转换为浮点数
+strval($var)   转换为字符串
 </body>
 </html>
