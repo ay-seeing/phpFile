@@ -17,7 +17,9 @@ if("broken"<"172"){
 }else{
 	echo "false";
 }
-
+echo "<hr />";
+$a=1;
+var_dump($a);
 ?>
 </body>
 </html>
